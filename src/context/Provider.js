@@ -4,7 +4,11 @@ import React, { useState } from 'react';
 import CarsContext from './CarsContext';
 
 function Provider({children}) {
-  const [cars, setCars] = useState({})
+  const [cars, setCars] = useState({
+    redCar: false,
+    blueCar: false,
+    yellowCar: false,
+  })
  function moveCar(car, side) {
    console.log(cars)
    setCars({...cars, [car]:side})
